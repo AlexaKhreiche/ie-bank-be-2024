@@ -19,9 +19,6 @@ elif os.getenv('ENV') == 'dev':
 elif os.getenv('ENV') == 'ghci':
     print("Running in GitHub CI mode")
     app.config.from_object('config.GithubCIConfig')
-else:
-    print("Running in production mode")
-    app.config.from_object('config.ProductionConfig')
 
 # Ensure SQLAlchemy is configured with a database URI
 if not app.config.get('SQLALCHEMY_DATABASE_URI'):
