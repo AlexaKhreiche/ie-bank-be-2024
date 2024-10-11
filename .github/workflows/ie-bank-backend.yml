@@ -49,7 +49,7 @@ jobs:
         path: |
           . 
 
-  deploy:
+  deployDEV:
     runs-on: ubuntu-latest
     needs: build
     environment:
